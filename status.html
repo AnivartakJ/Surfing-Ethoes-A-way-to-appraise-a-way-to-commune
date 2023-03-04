@@ -1,0 +1,371 @@
+
+  <section class="showcase">
+    <div class="video-container">
+        <video src="video.mp4" autoplay muted loop></video>
+    </div>
+    <div class="content">
+        <style>
+            .frame001 {
+                border-radius: 60px;
+                background: rgba(32, 3, 3, 0.7) url('../bag2.jpg');
+                opacity: 0.8;
+                border: 4px solid rgb(236, 8, 236);
+                height: 700px;
+                width: 1000px;
+
+
+
+            }
+
+            .buttons001 {
+                padding: 8px 20px;
+                /* margin: 7px 3px; */
+                border: 2px solid white;
+                border-radius: 8px;
+                background: none;
+                color: white;
+                cursor: pointer;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 30px;
+
+            }
+
+            .buttons001:hover {
+                /* padding: 8px 20px; */
+                /* margin: 7px 3px; */
+                border: 2px solid white;
+                border-radius: 8px;
+                background: none;
+                color: rgb(234, 245, 241);
+                cursor: pointer;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 40px;
+            }
+
+            .buttons002 {
+                padding: 8px 20px;
+                /* margin: 7px 3px; */
+                border: 2px solid white;
+                border-radius: 8px;
+                background: none;
+                color: rgb(126, 163, 233);
+                cursor: pointer;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 65px;
+
+            }
+            .buttons002:hover {
+                /* padding: 8px 20px; */
+                /* margin: 7px 3px; */
+                border: 2px solid white;
+                border-radius: 8px;
+                background: none;
+                color: rgb(77, 27, 240);
+                cursor: pointer;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 80px;
+            }
+
+            #font001 {
+                text-align: center;
+                font-size: large;
+                color: rgb(231, 239, 241);
+            }
+        </style>
+    <div Class="frame001 v-frame-resp ">
+        <div id="font001">
+            <h2 style="font-weight: bold;color: whitesmoke;"> Mental Health Check-up</h2><text>Question: <text
+                    id="number001">0</text></text><br />
+            <text>Score: <text id="score001">0</text></text>
+            <hr />
+            <div id="disappear001">
+                <button class="buttons002" onclick="begin001()">Start</button>
+            </div>
+            <p id="message001"></p>
+            <p id="message002"></p>
+            <p id="message003"></p>
+            <p id="message004"></p>
+        </div>
+    </div>
+    <script>
+        var question001 = ["<br> <br><h2> Little interest or pleasure in doing things </h2>",
+            "<br /><br /><h2> Feeling down, depressed, or hopeless </h2>",
+            "<br /><br /><h2>Trouble falling or staying asleep, or sleeping too much</h2>",
+            "<br /><br /><h2>Feeling tired or having little energy</h2>",
+            "<br /><br /><h2>Poor appetite or overeating</h2>",
+            "<br /><br /><h2>Feeling bad about yourself - or that you are a failure or have let yourself or your family down</h2>",
+            "<br /><br /><h2>Trouble concentrating on things, such as reading the newspaper or watching television</h2>",
+            "<br /><br /><h2>Moving or speaking so slowly that other people could have noticed</h2>",
+            "<br /><br /><h2>Thoughts that you would be better off dead, or of hurting yourself</h2>",
+            "<br /><br /><h2>If you've had any days with issues above, how difficult have these problems made it for you at work, home, school, or with other people?</h2>"
+        ];
+
+        var options001 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options002 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options003 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options004 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options005 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options006 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options007 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options008 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options009 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        var options010 = ["<br><br><button class=buttons001 onclick=q1()>Not at all</button><br /><br /><button class=buttons001 onclick=q2()>Several days</button><br /><br /><button class=buttons001 onclick=q3()>More than half of days</button><br /><br /><button class=buttons001 onclick=q4()>Nearly every day</button>"];
+        
+
+        var a = 0;
+        a++;
+        var b = 0;
+        b++;
+
+        function begin001() {
+            disappear001.innerHTML = "";
+            message001.innerHTML = question001[0];
+            message002.innerHTML = options001;
+            number001.innerHTML = a++;
+        }
+
+        function q1() {
+            message003.innerHTML = "<br> <br><br><h3> Short-term feedback: <br>By your response it this question <br> Hey please dont worry it doesn't seem that critical in this point of symptom recogniton journey.</h3>";
+            message002.innerHTML = "";
+            score001.innerHTML = b++;
+            message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+        }
+
+        function q2() {
+            message003.innerHTML = "<br> <br> <br>  <h3>Short-term feedback: <br>  By your response it this question <br> Seems like like it medium level critial i.e in day-to-day life in this point of symptom recogniton journey</h3>";
+            message002.innerHTML = "";
+            score001.innerHTML = b+=2;
+            message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+        }
+        function q3() {
+            message003.innerHTML = "<br> <br> <br><h3> Short-term feedback: <br> By your response it this question <br> Looks like it is critical ,you should start seeking help before it is too late in this point of symptom recogniton journey</h3>";
+            message002.innerHTML = "";
+            score001.innerHTML = b+=3;
+            message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+        }
+        function q4() {
+            message003.innerHTML = "<br><br><br><h3>  Short-term feedback: <br>By your response it this question <br>  Please try to seek some professional immediately in this particular situation help it is quite critical!</h3>";
+            message002.innerHTML = "";
+            score001.innerHTML = b+=4;
+            message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+        }
+
+        function next001() {
+            if (a == "2") {
+                message001.innerHTML = question001[1];
+                message002.innerHTML = options002;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "3") {
+                message001.innerHTML = question001[2];
+                message002.innerHTML = options003;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+
+            else if (a == "4") {
+                message001.innerHTML = question001[3];
+                message002.innerHTML = options004;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "5") {
+                message001.innerHTML = question001[4];
+                message002.innerHTML = options005;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "6") {
+                message001.innerHTML = question001[5];
+                message002.innerHTML = options006;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "7") {
+                message001.innerHTML = question001[6];
+                message002.innerHTML = options007;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "8") {
+                message001.innerHTML = question001[7];
+                message002.innerHTML = options008;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "9") {
+                message001.innerHTML = question001[8];
+                message002.innerHTML = options009;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            }
+
+            else if (a == "10") {
+                message001.innerHTML = question001[9];
+                message002.innerHTML = options010;
+                message003.innerHTML = "";
+                number001.innerHTML = a++;
+                message004.innerHTML = "";
+            } 
+            else {
+                        message001.innerHTML = "<h1>Final result:</h1>";
+                        message002.innerHTML = "";
+                        
+                        if (score001.innerHTML > 0 && score001.innerHTML < 15){
+                            message003.innerHTML = "<br> <h2> No Depression </h2><br> <h2>Your answers suggest you may not be suffering from depression. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. If you need help finding a mental health professional we suggest that you reach out to emergency mental health resources. </h2>";
+                        }
+                        else if (score001.innerHTML > 15 && score001.innerHTML < 20){
+                            message003.innerHTML = "<br><h2> Mild Indication of Depression </h2><br> <h2>Your answers suggest that you have some of the same symptoms common in people suffering from depression. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. If you need help right away, check out our directory of emergency mental health resources.</h2>";
+                        }
+                        else if (score001.innerHTML > 20 && score001.innerHTML < 25){
+                            message003.innerHTML = "<br><h2> Minimal Depression </h2><br> <h2>Your answers suggest you are suffering from minimal depression. Consider watchful waiting, and testing again normally within two weeks. Still if you don’t feel quite right we recommend you schedule an appointment with your doctor. If you need help finding a mental health professional we suggest that you reach out to http://www.nami.org/Find-Support.</h2>";
+                        }
+                        else if (score001.innerHTML > 25 && score001.innerHTML < 30){
+                            message003.innerHTML = "<br><h2> Moderate Depression </h2><br> <h2>Your answers suggest you are suffering from moderate depression. Consider watchful waiting, and testing again normally within two weeks. We additionally suggest it would be prudent to start a conversation with your doctor. If you need help finding a mental health professional we suggest that you reach out to http://www.nami.org/Find-Support.</h2>";
+                        }
+                        else if (score001.innerHTML > 30 && score001.innerHTML < 35){
+                            message003.innerHTML = "<br><h2> Moderate to Severe Depression </h2><br> <h2>Your answers suggest you are suffering from moderate to severe depression. It doesn’t necessarily mean you have depression but is important that you schedule an appointment with your doctor or a mental health worker. If you need help finding a mental health professional we suggest that you reach out to http://www.nami.org/Find-Support.</h2>";
+                        }
+                        else if (score001.innerHTML > 35 && score001.innerHTML < 40){
+                            message003.innerHTML = "<br><h2> Your answers suggest you are suffering from severe depression. It is important that you schedule an appointment with your doctor or a mental health worker now. If you need help finding a mental health professional we suggest that you reach out to http://www.nami.org/Find-Support.</h2>";
+                        }
+                        message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+                    }
+        }
+
+        function repeat001() {
+            location.reload();
+        }
+    </script>
+
+    </div>
+</section>
+
+<section id="about">
+    <h1>About us</h1>
+    <p>
+        We hope that you had checked your health status successfully!<br>
+        In case any problem occurs, feel free to contact us, our team will be quite happy to provide you the as much support as we can.
+    </p>
+
+    <h2>Thanks! </h2>
+
+    <div class="social">
+    <a href="https://twitter.com/traversymedia" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+        <a href="https://facebook.com/traversymedia" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+        <a href="https://github.com/bradtraversy" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://www.linkedin.com/in/bradtraversy" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+    </div>
+</section>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 2;
+}
+
+
+
+
+
+#about {
+	padding: 40px;
+	text-align: center;
+}
+
+#about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+#about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
+}
+
+.social a {
+	margin: 0 5px;
+}
+
+</style>
