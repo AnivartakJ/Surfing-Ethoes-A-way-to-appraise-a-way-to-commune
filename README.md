@@ -6,7 +6,7 @@ Visit this website : https://surfiingethoes.000webhostapp.com/#contact
 About this project : 
 <br>
 <br>
-This project aims to address the issue of mental health & the devastating consequences it can have on individuals. The lack of awareness and understanding of mental health has led to many people being unaware of their own critical mental health issues. The project proposes to develop a video call website that not only provides users with a seamless video chat experience but also monitors their mental health and provides solutions based on the results of conducted tests. The website will also offer features such as instantaneous polls and a user-friendly interface to make it stand apart from existing video call platforms.
+This project aims to address the issue of mental health & the devastating consequences it can have on individuals. The lack of awareness and understanding of mental health has led to many people being unaware of their own critical mental health issues. The project proposes to develop a video call website that not only provides users with a seamless video chat experience but also monitors their mental health and provides solutions based on the results of conducted tests. The website will also offer features such as instantaneous polls and a user-friendly interface to make it stand apart from existing video call platforms.   
 
 To better understand the risks and consequences of mental health issues, the team will analyze datasets based on age, sex, and personality to identify the most vulnerable groups. The project will consist of five modules, including searching for appropriate raw data sets, analyzing data using Pandas, designing the website, adding video call utility, and creating a mental health monitoring system.
  
